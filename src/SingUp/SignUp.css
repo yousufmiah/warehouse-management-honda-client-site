@@ -1,0 +1,30 @@
+
+.back-image{
+    /* background-Image: url("../../src/Assets/images/banner/banner5.jpg"); */
+    height: 100vh;
+   background-size: cover;
+    
+}
+@media only screen and (max-width: 900px) {
+ 
+    .neo{
+        width:100%;
+        margin: auto;
+    }
+ }
+
+ .container-form input:not([type=checkbox]){
+    width: 100%;
+    margin: auto;
+     display: block;
+     margin-top: 20px;
+     padding: 10px;
+     border-radius: 10px;
+ }
+
+ .para{
+padding-left:6px;
+margin-top:10px;
+font-weight: 500;
+
+ }

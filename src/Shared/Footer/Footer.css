@@ -1,0 +1,17 @@
+.footer-container{
+    color:white;
+ }
+.logo-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.copy-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.copy{
+    color: rgb(153, 146, 146);
+}
+
