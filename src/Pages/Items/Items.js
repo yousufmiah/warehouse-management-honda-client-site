@@ -12,7 +12,7 @@ const Items = () => {
   const navigate = useNavigate();
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/items")
+  //   fetch("http://localhost:5001/items")
   //     .then((res) => res.json())
   //     .then((data) => setItems(data));
   // }, []);
