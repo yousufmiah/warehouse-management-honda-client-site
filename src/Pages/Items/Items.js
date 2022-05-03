@@ -12,7 +12,7 @@ const Items = () => {
   const navigate = useNavigate();
 
   // useEffect(() => {
-  //   fetch("http://localhost:5001/items")
+  //   fetch("https://hidden-castle-09326.herokuapp.com/items")
   //     .then((res) => res.json())
   //     .then((data) => setItems(data));
   // }, []);
