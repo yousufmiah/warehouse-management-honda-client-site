@@ -7,7 +7,7 @@ const AddNew = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://hidden-castle-09326.herokuapp.com/items`;
+    const url = `https://powerful-citadel-84151.herokuapp.com/items`;
     fetch(url, {
       method: "POST",
       headers: {

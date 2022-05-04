@@ -12,7 +12,7 @@ const Items = () => {
   const navigate = useNavigate();
 
   // useEffect(() => {
-  //   fetch("https://hidden-castle-09326.herokuapp.com/items")
+  //   fetch("https://powerful-citadel-84151.herokuapp.com/items")
   //     .then((res) => res.json())
   //     .then((data) => setItems(data));
   // }, []);
