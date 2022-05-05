@@ -27,7 +27,7 @@ const Item = ({ item }) => {
               onClick={() => navigateItem(_id)}
               className="btn btn-primary"
             >
-              Details
+              Deliver
             </button>
           </div>
         </div>

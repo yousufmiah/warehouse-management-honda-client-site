@@ -4,9 +4,11 @@ import "./AddNew.css";
 
 const AddNew = () => {
   const { register, handleSubmit } = useForm();
+  register("");
 
   const onSubmit = (data) => {
     console.log(data);
+
     const url = `https://powerful-citadel-84151.herokuapp.com/items`;
     fetch(url, {
       method: "POST",

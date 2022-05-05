@@ -7,7 +7,7 @@ const Details = () => {
   const { itemId } = useParams();
   return (
     <div className="text-center">
-      <h2>Details:{itemId}</h2>
+      <h2>Delivered Item: {itemId}</h2>
     </div>
   );
 };

@@ -6,10 +6,10 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
-import "./SignUp.css";
+import "./Register.css";
 import Loading from "../Loading/Loading";
 
-const SignUp = () => {
+const Register = () => {
   const [agree, setAgree] = useState(false);
   const [userInfo, setUserInfo] = useState({
     email: "",
@@ -110,7 +110,7 @@ const SignUp = () => {
   return (
     <div className="pt-4 back-image">
       <div className=" neo pt-4 justify-content-center ">
-        <h2 className="text-center ">Sign Up</h2>
+        <h2 className="text-center ">Register</h2>
         <form onSubmit={handleFormLogIn}>
           <div className="container-form">
             <input
@@ -188,4 +188,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Register;

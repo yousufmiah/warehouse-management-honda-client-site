@@ -3,6 +3,7 @@ import "./SocialLogin.css";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../Firebase/Firebase.init";
 import { useNavigate } from "react-router-dom";
+import googleLogo from "../Assets/images/google.png";
 
 const SocialLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -34,13 +35,18 @@ const SocialLogin = () => {
       </div>
       {errorElement}
 
-      <div onClick={() => signInWithGoogle()} className="form-container">
-        <input
-          className="btn btn-success"
-          type="submit"
-          value="Sign in with Google"
+      <button
+        onClick={() => signInWithGoogle()}
+        className="btn btn-success w-100 d-block mx-auto my-2"
+      >
+        <img
+          className="me-2"
+          style={{ width: "30px" }}
+          src={googleLogo}
+          alt=""
         />
-      </div>
+        Sign in with Google
+      </button>
     </div>
   );
 };

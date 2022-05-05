@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../Firebase/Firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -22,6 +25,8 @@ const LogIn = () => {
   const [signInWithEmailAndPassword, user, loading, hookError] =
     useSignInWithEmailAndPassword(auth);
 
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -30,7 +35,7 @@ const LogIn = () => {
   const handleEmailOnChange = (event) => {
     const emailRegex = /\S+@\S+\.\S+/;
     const validEmail = emailRegex.test(event.target.value);
-    // console.log(validEmail);
+    console.log(validEmail);
 
     if (validEmail) {
       setUserInfo({ ...userInfo, email: event.target.value });
@@ -63,13 +68,27 @@ const LogIn = () => {
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
   };
 
+  const resetPassword = async (event) => {
+    const email = userInfo.email;
+    await sendPasswordResetEmail(email);
+    if (email) {
+      toast("Sent email");
+    } else {
+      toast("Please enter your email address.");
+    }
+    email("");
+  };
+
   useEffect(() => {
     if (hookError) {
+      console.log(hookError);
       switch (hookError?.code) {
-        case "auth/invalid-email":
-          toast("Invalid Email, Please provide valid email.");
+        // case "auth/invalid-email":
+        case "auth/user-not-found":
+          toast("Please provide valid email.");
           break;
-        case "auth/invalid-password":
+        // case "auth/invalid-password":
+        case "auth/wrong-password":
           toast("Wrong Password");
           break;
         default:
@@ -108,18 +127,23 @@ const LogIn = () => {
             <input className="btn btn-primary" type="submit" value="Login" />
           </div>
           {Loading}
-          {loading}
           <ToastContainer></ToastContainer>
         </form>
-        <p className="mt-3 text-center" style={{ fontWeight: "700" }}>
+        <p className="mt-3 text-center" style={{ fontWeight: "500" }}>
           New to Honda App ?
-          <Link
-            to="/signUp"
-            style={{ fontWeight: "700" }}
-            className="text-decoration-none ms-2"
-          >
+          <Link to="/register" className="text-decoration-none ms-2">
             Please Register
           </Link>
+        </p>
+        <p className="mt-3 text-center" style={{ fontWeight: "500" }}>
+          Forget Password?
+          <button
+            className="btn btn-link text-primary text-decoration-none "
+            style={{ fontWeight: "500" }}
+            onClick={resetPassword}
+          >
+            Reset Password
+          </button>
         </p>
         <SocialLogin></SocialLogin>
       </div>

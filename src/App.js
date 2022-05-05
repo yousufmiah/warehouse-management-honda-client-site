@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import LogIn from "./LogIn/LogIn";
+import Register from "./Register/Register";
 import AddNew from "./ManageItem/AddNew/AddNew";
 import Manage from "./ManageItem/Manage/Manage";
 import NotFound from "./NotFound/NotFound";
@@ -7,11 +8,9 @@ import About from "./Pages/About/About";
 import AllItems from "./Pages/AllItems/AllItems";
 import Details from "./Pages/Details/Details";
 import Home from "./Pages/Home/Home";
-import Item from "./Pages/Item/Item";
 import Items from "./Pages/Items/Items";
 import RequireAuth from "./RequireAuth/RequireAuth";
 import Header from "./Shared/Header/Header";
-import SignUp from "./SingUp/SignUp";
 
 function App() {
   return (
@@ -26,19 +25,19 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
 
         <Route path="/manage" element={<Manage></Manage>}></Route>
-        {/* <Route
+        <Route
           path="/manage"
           element={
             <RequireAuth>
               <Manage></Manage>
             </RequireAuth>
           }
-        ></Route> */}
+        ></Route>
         <Route path="/addNew" element={<AddNew></AddNew>}></Route>
 
         <Route path="/allItems" element={<AllItems></AllItems>}></Route>
         <Route path="/login" element={<LogIn></LogIn>}></Route>
-        <Route path="/signUp" element={<SignUp></SignUp>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

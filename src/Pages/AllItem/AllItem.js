@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Item.css";
+import "./AllItem.css";
 
 const AllItem = ({ item }) => {
   console.log(item);
@@ -27,7 +27,7 @@ const AllItem = ({ item }) => {
               onClick={() => navigateItem(_id)}
               className="btn btn-primary"
             >
-              Details
+              Deliver
             </button>
           </div>
         </div>
