@@ -9,7 +9,7 @@ const AddNew = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    const url = `http://localhost:4200/items`;
+    const url = `https://fast-temple-87800.herokuapp.com/items`;
     fetch(url, {
       method: "POST",
       headers: {

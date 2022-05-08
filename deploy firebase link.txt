@@ -2,7 +2,9 @@ live link: https://honda-app-91b97.web.app
 
 
 heroku 
-http://localhost:4200/
+https://fast-temple-87800.herokuapp.com/
+
+https://fast-temple-87800.herokuapp.com/
 
 
 stackover flow link:
