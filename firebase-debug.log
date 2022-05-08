@@ -1,0 +1,94 @@
+[debug] [2022-05-08T09:07:24.618Z] ----------------------------------------------------------------------
+[debug] [2022-05-08T09:07:24.621Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-08T09:07:24.621Z] CLI Version:   10.6.0
+[debug] [2022-05-08T09:07:24.621Z] Platform:      win32
+[debug] [2022-05-08T09:07:24.621Z] Node Version:  v14.17.3
+[debug] [2022-05-08T09:07:24.623Z] Time:          Sun May 08 2022 15:07:24 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-08T09:07:24.623Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-08T09:07:24.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-08T09:07:24.874Z] > authorizing via signed-in user (yousufweb99@gmail.com)
+[debug] [2022-05-08T09:07:24.874Z] [iam] checking project honda-app-91b97 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-08T09:07:24.878Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/honda-app-91b97:testIamPermissions [none]
+[debug] [2022-05-08T09:07:24.878Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/honda-app-91b97:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-08T09:07:27.102Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/honda-app-91b97:testIamPermissions 200
+[debug] [2022-05-08T09:07:27.103Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/honda-app-91b97:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-08T09:07:27.108Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/honda-app-91b97 [none]
+[debug] [2022-05-08T09:07:28.189Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/honda-app-91b97 200
+[debug] [2022-05-08T09:07:28.189Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/honda-app-91b97 {"projectId":"honda-app-91b97","projectNumber":"722034877760","displayName":"honda-app","name":"projects/honda-app-91b97","resources":{"hostingSite":"honda-app-91b97"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'honda-app-91b97'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-05-08T09:07:28.203Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/honda-app-91b97 [none]
+[debug] [2022-05-08T09:07:28.892Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/honda-app-91b97 200
+[debug] [2022-05-08T09:07:28.893Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/honda-app-91b97 {"projectId":"honda-app-91b97","projectNumber":"722034877760","displayName":"honda-app","name":"projects/honda-app-91b97","resources":{"hostingSite":"honda-app-91b97"},"state":"ACTIVE"}
+[debug] [2022-05-08T09:07:28.900Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions [none]
+[debug] [2022-05-08T09:07:28.901Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-05-08T09:07:31.205Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions 200
+[debug] [2022-05-08T09:07:31.206Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions {"name":"projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[honda-app-91b97]: beginning deploy... 
+[info] i  hosting[honda-app-91b97]: found 19 files in build 
+[debug] [2022-05-08T09:07:31.268Z] [hosting] uploading with 200 concurrency
+[debug] [2022-05-08T09:07:31.601Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2022-05-08T09:07:31.601Z] [hosting][hash queue][FINAL] {"max":318,"min":7,"avg":44,"active":0,"complete":19,"success":19,"errored":0,"retried":0,"total":19,"elapsed":329}
+[debug] [2022-05-08T09:07:31.602Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa:populateFiles [none]
+[debug] [2022-05-08T09:07:31.602Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa:populateFiles {"files":{"/favicon.ico":"c1f19f2d6a470b5da8596f81499f31eb170c3d3ce798edd97627a48b017c1af7","/hondaData.json":"2eae6e99150fec7280cfbf226c1e889604707db22bbfc1e43e2ca50f3f066497","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"b99c343727327f1f83c93d8176d1767c5a618c5735a799081661e98a74eb901f","/index.html":"bf3127b05d81ac9fa18853f5e37f6b52b8835c0ee4d021e34aa91976ec13c12a","/static/js/787.ee75211d.chunk.js":"5d88c684bc360dc58be668117ccf6f397ba42f83598248ae40bddce49e1c4277","/static/js/787.ee75211d.chunk.js.map":"2361a5ff4718bc98b6c4281b450619f32ca5881ccbed3f1153ce6f592b6144a5","/static/js/main.edf5a754.js.LICENSE.txt":"980850d0c97fc4da1718320dcc140b4bafb239b14275f3a5d9640098e064ab8a","/static/media/banner2.d56ad1757e49065821ae.jpg":"1b66dfb7b526174e1bb72ce970a0655019c0d52439baf46eb4ca1f65ef852270","/static/media/google.0590aaf0fe36e23dcc8c.png":"40c72d37b7d1249bc4cf58d5480fa4732d2176f2e529dd58c0c4fa9fed76f2fd","/static/media/404-error-page-not-found.44f968b5b37b520269b3.jpg":"3317d90579e22469221f8ed0265a8a732ec41cc4ab4b65375f7b08dd7144c682","/static/css/main.6b7faf1f.css":"1ec33e5f2ec018864014bd4e0d9f0701a5ed2538589a24e8e39d89a7fdfbc673","/static/media/logo.52d984ffb77941ef9d73.png":"a8683abf185d8a1688f5c2d0fc885fa88b6e43f1a66cc37e3a47f8674be32f32","/static/css/main.6b7faf1f.css.map":"ddb7355c4edf00b0e9cd09765be71479ce908821e0c0a621611341c0f167151a","/static/js/main.edf5a754.js":"601948533d56a67f90682c1de42046847b6413ece6686110ab70a279a7f67876","/static/js/main.edf5a754.js.map":"0b05f3dfb2c2beb727bea846599dec54badbd46105135b706e2b8c177f320a3a"}}
+[debug] [2022-05-08T09:07:33.610Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa:populateFiles 200
+[debug] [2022-05-08T09:07:33.611Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa:populateFiles {"uploadRequiredHashes":["0b05f3dfb2c2beb727bea846599dec54badbd46105135b706e2b8c177f320a3a","bf3127b05d81ac9fa18853f5e37f6b52b8835c0ee4d021e34aa91976ec13c12a","601948533d56a67f90682c1de42046847b6413ece6686110ab70a279a7f67876","b99c343727327f1f83c93d8176d1767c5a618c5735a799081661e98a74eb901f"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files"}
+[debug] [2022-05-08T09:07:33.618Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/0b05f3dfb2c2beb727bea846599dec54badbd46105135b706e2b8c177f320a3a [none]
+[debug] [2022-05-08T09:07:33.619Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/0b05f3dfb2c2beb727bea846599dec54badbd46105135b706e2b8c177f320a3a [stream]
+[debug] [2022-05-08T09:07:33.625Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/bf3127b05d81ac9fa18853f5e37f6b52b8835c0ee4d021e34aa91976ec13c12a [none]
+[debug] [2022-05-08T09:07:33.626Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/bf3127b05d81ac9fa18853f5e37f6b52b8835c0ee4d021e34aa91976ec13c12a [stream]
+[debug] [2022-05-08T09:07:33.631Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/601948533d56a67f90682c1de42046847b6413ece6686110ab70a279a7f67876 [none]
+[debug] [2022-05-08T09:07:33.631Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/601948533d56a67f90682c1de42046847b6413ece6686110ab70a279a7f67876 [stream]
+[debug] [2022-05-08T09:07:33.634Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/b99c343727327f1f83c93d8176d1767c5a618c5735a799081661e98a74eb901f [none]
+[debug] [2022-05-08T09:07:33.634Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/b99c343727327f1f83c93d8176d1767c5a618c5735a799081661e98a74eb901f [stream]
+[debug] [2022-05-08T09:07:33.636Z] [hosting][populate queue][FINAL] {"max":2019,"min":2019,"avg":2019,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2037}
+[debug] [2022-05-08T09:07:33.636Z] [hosting] uploads queued: 4
+[debug] [2022-05-08T09:07:36.744Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/bf3127b05d81ac9fa18853f5e37f6b52b8835c0ee4d021e34aa91976ec13c12a 200
+[debug] [2022-05-08T09:07:36.745Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/bf3127b05d81ac9fa18853f5e37f6b52b8835c0ee4d021e34aa91976ec13c12a [stream]
+[debug] [2022-05-08T09:07:36.776Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/b99c343727327f1f83c93d8176d1767c5a618c5735a799081661e98a74eb901f 200
+[debug] [2022-05-08T09:07:36.777Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/b99c343727327f1f83c93d8176d1767c5a618c5735a799081661e98a74eb901f [stream]
+[debug] [2022-05-08T09:07:37.041Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/601948533d56a67f90682c1de42046847b6413ece6686110ab70a279a7f67876 200
+[debug] [2022-05-08T09:07:37.041Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/601948533d56a67f90682c1de42046847b6413ece6686110ab70a279a7f67876 [stream]
+[debug] [2022-05-08T09:07:37.159Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/0b05f3dfb2c2beb727bea846599dec54badbd46105135b706e2b8c177f320a3a 200
+[debug] [2022-05-08T09:07:37.160Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/honda-app-91b97/versions/431aa1f2b6cb62fa/files/0b05f3dfb2c2beb727bea846599dec54badbd46105135b706e2b8c177f320a3a [stream]
+[debug] [2022-05-08T09:07:37.160Z] [hosting][upload queue][FINAL] {"max":3548,"min":3130,"avg":3316.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":3548}
+[info] +  hosting[honda-app-91b97]: file upload complete 
+[debug] [2022-05-08T09:07:37.164Z] [hosting] deploy completed after 5955ms
+[debug] [2022-05-08T09:07:37.176Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "honda-app-91b97"
+    },
+    "site": "honda-app-91b97",
+    "version": "projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa"
+  }
+]
+[info] i  hosting[honda-app-91b97]: finalizing version... 
+[debug] [2022-05-08T09:07:37.179Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa updateMask=status
+[debug] [2022-05-08T09:07:37.179Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa {"status":"FINALIZED"}
+[debug] [2022-05-08T09:07:39.123Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa 200
+[debug] [2022-05-08T09:07:39.123Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa {"name":"projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-08T09:07:30.320077Z","createUser":{"email":"yousufweb99@gmail.com"},"finalizeTime":"2022-05-08T09:07:38.497241Z","finalizeUser":{"email":"yousufweb99@gmail.com"}}
+[debug] [2022-05-08T09:07:39.124Z] [hosting] finalized version for honda-app-91b97:[object Object]
+[info] +  hosting[honda-app-91b97]: version finalized 
+[info] i  hosting[honda-app-91b97]: releasing new version... 
+[debug] [2022-05-08T09:07:39.128Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/releases versionName=projects%2F722034877760%2Fsites%2Fhonda-app-91b97%2Fversions%2F431aa1f2b6cb62fa
+[debug] [2022-05-08T09:07:39.128Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/releases {"message":null}
+[debug] [2022-05-08T09:07:41.117Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/releases 200
+[debug] [2022-05-08T09:07:41.117Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/722034877760/sites/honda-app-91b97/releases {"name":"projects/722034877760/sites/honda-app-91b97/releases/1652000859894141","version":{"name":"projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-08T09:07:30.320077Z","createUser":{"email":"yousufweb99@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiEKysCTJLuivoBgltZEduuA-cQPowt-aKU10xQmA"},"finalizeTime":"2022-05-08T09:07:38.497241Z","finalizeUser":{"email":"yousufweb99@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiEKysCTJLuivoBgltZEduuA-cQPowt-aKU10xQmA"}},"type":"DEPLOY","releaseTime":"2022-05-08T09:07:39.894141448Z","releaseUser":{"email":"yousufweb99@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiEKysCTJLuivoBgltZEduuA-cQPowt-aKU10xQmA"}}
+[debug] [2022-05-08T09:07:41.118Z] [hosting] release: {"name":"projects/722034877760/sites/honda-app-91b97/releases/1652000859894141","version":{"name":"projects/722034877760/sites/honda-app-91b97/versions/431aa1f2b6cb62fa","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-08T09:07:30.320077Z","createUser":{"email":"yousufweb99@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiEKysCTJLuivoBgltZEduuA-cQPowt-aKU10xQmA"},"finalizeTime":"2022-05-08T09:07:38.497241Z","finalizeUser":{"email":"yousufweb99@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiEKysCTJLuivoBgltZEduuA-cQPowt-aKU10xQmA"}},"type":"DEPLOY","releaseTime":"2022-05-08T09:07:39.894141448Z","releaseUser":{"email":"yousufweb99@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiEKysCTJLuivoBgltZEduuA-cQPowt-aKU10xQmA"}}
+[info] +  hosting[honda-app-91b97]: release complete 

@@ -15,11 +15,14 @@ const Footer = () => {
         <div className="d-flex justify-content-center">
           <div className="footer-text ">
             <Link to="/about" className="text-decoration-none">
-              <p>About Honda App</p>
+              <p>About Honda Store</p>
+            </Link>
+            <Link to="/blogs" className="text-decoration-none">
+              <p>Blogs of Honda Store</p>
             </Link>
 
-            <Link to="/signup" className="text-decoration-none">
-              <p>Sign up to Visit Site & enjoy</p>
+            <Link to="/register" className="text-decoration-none">
+              <p>Register to Honda Store</p>
             </Link>
           </div>
         </div>
