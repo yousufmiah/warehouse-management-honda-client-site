@@ -1,44 +1,50 @@
 [
     {
         "name":"wego scooter1",
-        "description": "It very easy to drive and feel comfort as you like in the road.",
+        "description": "Easy to drive",
         "quantity": 8,
         "price": "Tk 250000",
-        "img":"https://i.ibb.co/brDqVwn/honda1.jpg"       
+        "img":"https://i.ibb.co/brDqVwn/honda1.jpg",       
+        "supplier":"Mr. Karim"
     }, 
     {
         "name":"wego scooter2",
-        "description": "It very easy to drive and feel comfort as you like in the road.",
+        "description": "Easy to drive.",
         "quantity": 6,
         "price": "Tk 300000",
-        "img":"https://i.ibb.co/K51B1BY/honda2.jpg"        
+        "img":"https://i.ibb.co/K51B1BY/honda2.jpg",
+        "supplier":"Mr. Rahim"      
     }, 
     {
         "name":"wego scooter3",
-        "description": "It very easy to drive and feel comfort as you like in the road.",
+        "description": "Easy to drive.",
         "quantity": 5,
         "price": "Tk 350000",
-        "img":"https://i.ibb.co/vkbT72d/honda3.png"        
+        "img":"https://i.ibb.co/vkbT72d/honda3.png",
+        "supplier":"Mr. Jamal"      
     }, 
     {
         "name":"wego scooter4",
-        "description": "It very easy to drive and feel comfort as you like in the road.",
+        "description": "Drive comfort.",
         "quantity": 3,
         "price": "Tk 240000",
-        "img":"https://i.ibb.co/BNbhQnR/honda4.jpg"        
+        "img":"https://i.ibb.co/BNbhQnR/honda4.jpg",
+        "supplier":"Mr. Sabbir"
     }, 
     {
         "name":"wego scooter5",
-        "description": "It very easy to drive and feel comfort as you like in the road.",
+        "description": "Easy drive.",
         "quantity": 7,
         "price": "Tk 360000",
-        "img":"https://i.ibb.co/YhTLnnS/honda5.jpg"    
+        "img":"https://i.ibb.co/YhTLnnS/honda5.jpg",
+        "supplier":"Mr. Alom"
     }, 
     {
         "name":"wego scooter1",
-        "description": "It very easy to drive and feel comfort as you like in the road.",
+        "description": "Easy drive.",
         "quantity": 2,
         "price": "Tk 370000",
-        "img":"https://i.ibb.co/M9wX1hW/honda6.jpg"    
+        "img":"https://i.ibb.co/M9wX1hW/honda6.jpg",
+        "supplier":"Mr. Ali"
     }
 ]

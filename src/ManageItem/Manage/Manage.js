@@ -1,17 +1,27 @@
 import React from "react";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import useHookData from "../../Hooks/useHookData";
+import useItemDetail from "../../Hooks/useItemDetails";
 import "./Manage.css";
 
 const Manage = () => {
-  const [items, setItems] = useHookData();
-  console.log(items);
+  const navigate = useNavigate();
 
+  const [items, setItems] = useHookData();
+
+  // update
+  const handleUpdateItem = (id) => {
+    navigate(`/updateItem/${id}`);
+    console.log(id);
+  };
+
+  // delete
   const handleDelete = (id) => {
     console.log(id);
 
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://powerful-citadel-84151.herokuapp.com/item/${id}`;
+      const url = `http://localhost:5001/items/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",
@@ -26,27 +36,31 @@ const Manage = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className=" container text-center">
       <h3>Manage Items</h3>
       <div>
-        <table class="table table-striped">
+        <table className="table table-striped">
           <thead>
-            <tr>
-              <th scope="col">SL. No.</th>
+            <tr className="">
+              <th scope="col">Sl. No.</th>
               <th scope="col">Name</th>
               <th scope="col">Description</th>
+              <th scope="col">Suppler</th>
               <th scope="col">Quantity</th>
               <th scope="col">Images</th>
               <th scope="col">Price</th>
             </tr>
           </thead>
           <tbody>
-            {items.map((item) => {
+            {items.map((item, i) => {
               return (
                 <tr>
-                  <th className="my-5 " scope="row"></th>
+                  <td className="my-5 " scope="row">
+                    {i + 1}
+                  </td>
                   <td>{item.name}</td>
                   <td>{item.description}</td>
+                  <td>{item.supplier}</td>
                   <td>{item.quantity}</td>
                   <td>
                     <img
@@ -57,7 +71,12 @@ const Manage = () => {
                   </td>
                   <td>{item.price}</td>
                   <td>
-                    <button className="btn btn-primary">Update</button>
+                    <button
+                      onClick={() => handleUpdateItem(item._id)}
+                      className="btn btn-primary"
+                    >
+                      Update Item
+                    </button>
                   </td>
                   <td>
                     <button

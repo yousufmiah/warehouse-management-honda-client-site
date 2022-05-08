@@ -5,10 +5,10 @@ import "./Items.css";
 
 const Items = () => {
   const [items, setItems] = useHookData([]);
+  console.log(items);
 
   const sliceItems = items.slice(0, 6);
   console.log(sliceItems);
-  console.log(items);
 
   const navigate = useNavigate();
   const handleAllItems = () => {
@@ -17,7 +17,7 @@ const Items = () => {
   };
 
   return (
-    <div id="items" className="container mb-5 ">
+    <div id="items" className="container">
       <div className="row ">
         <h1 className="text-center text-primary my-5">Items Section</h1>
         <div className="items-container">

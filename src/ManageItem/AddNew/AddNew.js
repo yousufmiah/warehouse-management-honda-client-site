@@ -3,13 +3,12 @@ import { useForm } from "react-hook-form";
 import "./AddNew.css";
 
 const AddNew = () => {
-  const { register, handleSubmit } = useForm();
-  register("");
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
 
-    const url = `https://powerful-citadel-84151.herokuapp.com/items`;
+    const url = `http://localhost:5001/items`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -40,6 +39,7 @@ const AddNew = () => {
         <input placeholder="Quantity" type="number" {...register("quantity")} />
         <input placeholder="Price" type="number" {...register("price")} />
         <input placeholder="Image URL" type="text" {...register("img")} />
+        <input placeholder="Supplier" type="text" {...register("supplier")} />
         <input className="btn btn-primary" type="submit" value="Add Item" />
       </form>
     </div>

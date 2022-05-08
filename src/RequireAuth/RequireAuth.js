@@ -37,7 +37,7 @@ const RequireAuth = ({ children }) => {
             toast("Sent email");
           }}
         >
-          Send Verification email again
+          Send Verification Email
         </button>
         <ToastContainer></ToastContainer>
       </div>

@@ -31,7 +31,7 @@ const Header = () => {
               style={{ fontSize: "25px" }}
               className="ps-2 text-success font-bold "
             >
-              Honda App
+              Honda Store
             </strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -40,10 +40,16 @@ const Header = () => {
               <CustomLink to="/home" className=" mx-3 navbar-text ">
                 Home
               </CustomLink>
-
-              <CustomLink to="/items" className=" mx-3 navbar-text">
-                Items
+              <CustomLink to="/about" className=" mx-3 navbar-text ">
+                About
               </CustomLink>
+              <CustomLink to="/blogs" className=" mx-3 navbar-text ">
+                Blogs
+              </CustomLink>
+
+              {/* <CustomLink to="/items" className=" mx-3 navbar-text">
+                Items
+              </CustomLink> */}
             </Nav>
             <Nav>
               <CustomLink to="/manage" className=" mx-3 navbar-text">
