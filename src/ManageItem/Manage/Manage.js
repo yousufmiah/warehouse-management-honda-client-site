@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useHookData from "../../Hooks/useHookData";
-import useItemDetail from "../../Hooks/useItemDetails";
+
 import "./Manage.css";
 
 const Manage = () => {

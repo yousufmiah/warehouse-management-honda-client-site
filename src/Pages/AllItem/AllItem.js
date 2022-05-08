@@ -5,12 +5,31 @@ import "./AllItem.css";
 const AllItem = ({ item }) => {
   console.log(item);
   const { _id, name, description, quantity, img, price } = item;
-
   const navigate = useNavigate();
 
-  const navigateItem = (id) => {
+  const handleUpdateItem = (id) => {
+    const updatedItem = item;
+    updatedItem.quantity = quantity - 1;
+
+    // send data to the server
+    if (quantity > 0) {
+      const url = `https://fast-temple-87800.herokuapp.com/item/${id}`;
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedItem),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert("Item Delivered successfully!!!");
+        });
+    }
+
     navigate(`/item/${id}`);
   };
+
   return (
     <div className="mb-5 ">
       <div className="flip-card">
@@ -24,7 +43,7 @@ const AllItem = ({ item }) => {
             <p>Quantity: {quantity}</p>
             <p>{price}</p>
             <button
-              onClick={() => navigateItem(_id)}
+              onClick={() => handleUpdateItem(_id)}
               className="btn btn-primary"
             >
               Deliver

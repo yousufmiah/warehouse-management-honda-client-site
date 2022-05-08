@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 import "./AddNew.css";
 
 const AddNew = () => {
@@ -20,6 +21,13 @@ const AddNew = () => {
       .then((result) => {
         console.log(result);
       });
+
+    Swal.fire({
+      icon: "success",
+      text: "Item has been saved.",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
 
   return (

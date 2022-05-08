@@ -1,4 +1,3 @@
-import { useNavigate, useParams } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ item }) => {
