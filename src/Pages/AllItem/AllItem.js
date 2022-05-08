@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./AllItem.css";
 
 const AllItem = ({ item }) => {
@@ -20,11 +21,13 @@ const AllItem = ({ item }) => {
           "content-type": "application/json",
         },
         body: JSON.stringify(updatedItem),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          alert("Item Delivered successfully!!!");
-        });
+      });
+      Swal.fire({
+        icon: "success",
+        text: "Delivered Success.",
+        showConfirmButton: false,
+        timer: 2000,
+      });
     }
 
     navigate(`/item/${id}`);

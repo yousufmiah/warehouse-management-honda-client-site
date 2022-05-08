@@ -6,14 +6,14 @@ import "./UpdateItem.css";
 const UpdateItem = () => {
   const { register, handleSubmit, reset } = useForm();
   const { updateId } = useParams();
-  // console.log(updateId);
+  console.log(updateId);
 
   const [item, setItem] = useItemDetail(updateId);
   // console.log(item);
 
   const onSubmit = (data) => {
     // Post New Data to server
-    const url = `https://fast-temple-87800.herokuapp.com/updateitem/${updateId}`;
+    const url = `http://fast-temple-87800.herokuapp.com/updateitem/${updateId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -26,6 +26,7 @@ const UpdateItem = () => {
         alert("item Updated successfully!!!");
         setItem(data);
       });
+    reset();
   };
 
   return (

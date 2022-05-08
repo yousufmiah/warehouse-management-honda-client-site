@@ -28,6 +28,7 @@ const AddNew = () => {
       showConfirmButton: false,
       timer: 2000,
     });
+    reset();
   };
 
   return (

@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import "./Item.css";
 
 const Item = ({ item }) => {
@@ -17,11 +18,13 @@ const Item = ({ item }) => {
           "content-type": "application/json",
         },
         body: JSON.stringify(updatedItem),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          alert("Item Delivered successfully!!!");
-        });
+      });
+      Swal.fire({
+        icon: "success",
+        text: "Delivered Success.",
+        showConfirmButton: false,
+        timer: 2000,
+      });
     }
   };
 

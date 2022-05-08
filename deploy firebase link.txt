@@ -7,3 +7,10 @@ https://fast-temple-87800.herokuapp.com/
 
 stackover flow link:
 https://stackoverflow.com/users/14247518/hr-yousuf-miah?tab=questions
+
+Client side git link:
+https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-yousufmiah.git
+
+
+server side git link:
+https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-yousufmiah.git
