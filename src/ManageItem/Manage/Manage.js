@@ -21,7 +21,7 @@ const Manage = () => {
 
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://fast-temple-87800.herokuapp.com/items/${id}`;
+      const url = `http://localhost:4200/items/${id}`;
       console.log(url);
       fetch(url, {
         method: "DELETE",

@@ -12,7 +12,7 @@ const AllItems = () => {
   const [pageNumber, setPageNumber] = useState(0);
 
   useEffect(() => {
-    const url = `https://fast-temple-87800.herokuapp.com/items?limit=${limit}&pageNumber=${pageNumber}`;
+    const url = `http://localhost:4200/items?limit=${limit}&pageNumber=${pageNumber}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItems(data));

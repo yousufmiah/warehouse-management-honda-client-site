@@ -11,7 +11,7 @@ const Item = ({ item }) => {
 
     // send data to the server
     if (quantity > 0) {
-      const url = `https://fast-temple-87800.herokuapp.com/item/${id}`;
+      const url = `http://localhost:4200/item/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {

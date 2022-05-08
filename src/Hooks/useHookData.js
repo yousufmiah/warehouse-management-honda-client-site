@@ -5,7 +5,7 @@ const useHookData = () => {
 
   // console.log(items);
   useEffect(() => {
-    fetch("https://fast-temple-87800.herokuapp.com/items")
+    fetch("http://localhost:4200/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [items]);

@@ -13,7 +13,7 @@ const UpdateItem = () => {
 
   const onSubmit = (data) => {
     // Post New Data to server
-    const url = `http://fast-temple-87800.herokuapp.com/updateitem/${updateId}`;
+    const url = `http://localhost:4200/updateItem/${updateId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -39,17 +39,20 @@ const UpdateItem = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
-          placeholder={item.name}
+          defaultValue={item.name}
           {...register("name", { required: true, maxLength: 20 })}
         />
-        <textarea placeholder={item.description} {...register("description")} />
+        <textarea
+          defaultValue={item.description}
+          {...register("description")}
+        />
         <input
-          placeholder={item.quantity}
+          defaultValue={item.quantity}
           type="number"
           {...register("quantity")}
         />
-        <input placeholder={item.price} type="number" {...register("price")} />
-        <input placeholder={item.img} type="text" {...register("img")} />
+        <input defaultValue={item.price} type="text" {...register("price")} />
+        <input defaultValue={item.img} type="text" {...register("img")} />
         <input className="btn btn-primary" type="submit" value="Update Item" />
       </form>
     </div>
