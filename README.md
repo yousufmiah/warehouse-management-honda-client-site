@@ -2,7 +2,7 @@
 
 ### Live link
 This project is [Honda Store]( https://honda-app-91b97.web.app).
-##### This Honda store of inventory management system where you can use for item add, devliver, update, delete as you like.
+##### This is Honda store of inventory management system where you can use for item add, devliver, update, delete as you like.
 
 
 
