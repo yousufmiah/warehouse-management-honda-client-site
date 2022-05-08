@@ -13,7 +13,7 @@ const UpdateItem = () => {
 
   const onSubmit = (data) => {
     // Post New Data to server
-    const url = `http://localhost:5001/updateitem/${updateId}`;
+    const url = `https://fast-temple-87800.herokuapp.com/updateitem/${updateId}`;
     fetch(url, {
       method: "PUT",
       headers: {

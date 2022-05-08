@@ -4,7 +4,7 @@ const useItemDetail = (itemId) => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5001/item/${itemId}`;
+    const url = `https://fast-temple-87800.herokuapp.com/item/${itemId}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())

@@ -6,7 +6,7 @@ const Details = () => {
   const { itemId } = useParams();
   const [items, setItems] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5001/item/${itemId}`;
+    const url = `https://fast-temple-87800.herokuapp.com/item/${itemId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItems(data));
